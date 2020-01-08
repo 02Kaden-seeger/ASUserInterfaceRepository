@@ -22,13 +22,31 @@
         android:layout_height="wrap_content"
         android:text="0"
         android:textSize="35sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Price"
+        android:textSize="35sp"
+        android:paddingLeft="12dp"
+        android:text="0"
+        android:layout_below="@+id/price_text"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_text"
+        android:layout_below="@+id/zero"
+        android:paddingLeft="12dp"
+        android:text="Price"
+        android:textSize="35dp"
+        />
 
     <Button
         android:id="@+id/button_id"
         android:onClick="submitOrder"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/zero"
+        android:layout_below="@id/Price"
         android:layout_marginLeft="12dp"
         android:paddingLeft="2dp"
         android:text="Order"

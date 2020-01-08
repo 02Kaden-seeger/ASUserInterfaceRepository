@@ -7,21 +7,31 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:paddingLeft="12dp"
+        android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="35sp"
         android:text="Quantity" />
 
     <TextView
+        android:paddingLeft="12dp"
+        android:layout_below="@id/quantity"
+        android:id="@+id/zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        
         android:text="0"
         android:textSize="35sp" />
+
     <Button
         android:id="@+id/button_id"
-        android:layout_height="wrap_content"
+        android:onClick="submitOrder"
         android:layout_width="wrap_content"
-        android:text="@string/self_destruct" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/zero"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="Order"
+        android:textSize="20sp" />
 
 </RelativeLayout>

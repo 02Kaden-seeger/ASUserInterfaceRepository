@@ -13,6 +13,7 @@ import java.util.Locale;
  */
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 0;
+    String thank = "Thank you for ordering"
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +25,26 @@ public class MainActivity extends AppCompatActivity {
      This method is called when the order is clicked.
      */
     public void submitOrder(View view) {
+        displayPrice(numberOfCoffees * 5);
+        TextView TY = (TextView)
+        TY.setText(thank + numberOfCoffees + "Coffes");
+    }
+    public void increment(View view) {
         numberOfCoffees++;
         display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+
     }
+    public void decrement(View view) {
+        if(numberOfCoffees < 1){
+            display(0);
+        }else{
+            numberOfCoffees--;
+            display(numberOfCoffees);
+
+        }
+
+    }
+
     /**
 
      This method displays the given quantity value on screen.

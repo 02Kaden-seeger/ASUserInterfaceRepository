@@ -16,7 +16,7 @@
 
     <TextView
         android:paddingLeft="12dp"
-        android:layout_below="@id/quantity"
+        android:layout_below="@id/button_idone"
         android:id="@+id/zero"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -33,9 +33,37 @@
         />
     <TextView
         android:layout_width="wrap_content"
+        android:id="@+id/TY"
+        android:layout_height="wrap_content"
+        android:textSize="35dp"
+        android:layout_below="@+id/button_id"
+        android:paddingLeft="12dp"
+        android:text=""
+    <Button
+        android:id="@+id/button_idone"
+        android:onClick="increment"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/quantity"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="+"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/button_idtwo"
+        android:onClick="decrement"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/zero"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="-"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/price_text"
-        android:layout_below="@+id/zero"
+        android:layout_below="@+id/button_idtwo"
         android:paddingLeft="12dp"
         android:text="Price"
         android:textSize="35dp"

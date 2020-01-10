@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,12 +7,69 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:paddingLeft="12dp"
+        android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="35sp"
+        android:text="Quantity" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:paddingLeft="12dp"
+        android:layout_below="@id/button_idone"
+        android:id="@+id/zero"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="35sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Price"
+        android:textSize="35sp"
+        android:paddingLeft="12dp"
+        android:text="0"
+        android:layout_below="@+id/price_text"
+        />
+    <Button
+        android:id="@+id/button_idone"
+        android:onClick="increment"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/quantity"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="+"
+        android:textSize="20sp" />
+    <Button
+        android:id="@+id/button_idtwo"
+        android:onClick="decrement"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/zero"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="-"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/price_text"
+        android:layout_below="@+id/button_idtwo"
+        android:paddingLeft="12dp"
+        android:text="Price"
+        android:textSize="35dp"
+        />
+
+    <Button
+        android:id="@+id/button_id"
+        android:onClick="submitOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Price"
+        android:layout_marginLeft="12dp"
+        android:paddingLeft="2dp"
+        android:text="Order"
+        android:textSize="20sp" />
+
+</RelativeLayout>

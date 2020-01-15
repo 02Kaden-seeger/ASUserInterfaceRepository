@@ -7,69 +7,86 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:paddingLeft="12dp"
         android:id="@+id/quantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="35sp"
         android:text="Quantity" />
 
-    <TextView
-        android:paddingLeft="12dp"
-        android:layout_below="@id/button_idone"
-        android:id="@+id/zero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textSize="35sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/Price"
-        android:textSize="35sp"
-        android:paddingLeft="12dp"
-        android:text="0"
-        android:layout_below="@+id/price_text"
-        />
-    <Button
-        android:id="@+id/button_idone"
-        android:onClick="increment"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:layout_below="@id/quantity"
-        android:layout_marginLeft="12dp"
-        android:paddingLeft="2dp"
-        android:text="+"
-        android:textSize="20sp" />
-    <Button
-        android:id="@+id/button_idtwo"
-        android:onClick="decrement"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_below="@id/zero"
-        android:layout_marginLeft="12dp"
-        android:paddingLeft="2dp"
-        android:text="-"
-        android:textSize="20sp" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/price_text"
-        android:layout_below="@+id/button_idtwo"
-        android:paddingLeft="12dp"
-        android:text="Price"
-        android:textSize="35dp"
-        />
+        android:id="@+id/Linearone"
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button_id"
-        android:onClick="submitOrder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/Price"
-        android:layout_marginLeft="12dp"
-        android:paddingLeft="2dp"
-        android:text="Order"
-        android:textSize="20sp" />
+        <Button
+            android:onClick="decrement"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/zero"
+            android:text="-"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="35sp" />
+
+        <Button
+            android:id="@+id/button_idone"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/Price"
+            android:layout_alignEnd="@+id/button_id"
+            android:onClick="increment"
+            android:text="+"
+            android:textSize="20sp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Lineartwo"
+        android:layout_below="@id/Linearone"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/price_text"
+            android:text="Price"
+            android:textSize="35sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/Linearthree"
+        android:layout_below="@id/Lineartwo"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Price"
+            android:textSize="35sp"
+            android:text="0"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/Linearthree"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button_id"
+            android:onClick="submitOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
 
 </RelativeLayout>

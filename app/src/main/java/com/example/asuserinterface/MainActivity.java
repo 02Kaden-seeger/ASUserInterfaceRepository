@@ -1,5 +1,4 @@
 package com.example.asuserinterface;
-
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +12,7 @@ import java.util.Locale;
  */
 public class MainActivity extends AppCompatActivity {
     int numberOfCoffees = 0;
+    int pricedue = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,7 +24,10 @@ public class MainActivity extends AppCompatActivity {
      This method is called when the order is clicked.
      */
     public void submitOrder(View view) {
-        displayPrice(numberOfCoffees * 5);
+        pricedue = numberOfCoffees * 5;
+        String message = "Total: $" +  pricedue + "\nThank you!";
+        displaythank(message);
+
 
     }
     public void increment(View view) {
@@ -52,7 +55,11 @@ public class MainActivity extends AppCompatActivity {
         quantityTextView.setText("" + number);
     }
     private void  displayPrice(int number){
-        TextView PriceTextView=(TextView)findViewById(R.id.Price);
+        TextView PriceTextView=(TextView)findViewById(R.id.price_text_view);
         PriceTextView.setText(NumberFormat.getCurrencyInstance(new Locale("en", "US")).format(number));
+    }
+    private void displaythank(String message){
+        TextView messageTextView=(TextView)findViewById(R.id.price_text_view);
+        messageTextView.setText(message);
     }
 }
